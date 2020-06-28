@@ -10,6 +10,7 @@ const About = () => {
                 <title>About</title>
             </Helmet>
             <div className="container">
+                <h1 className="display-4 text-center my-2">About Me</h1>
                 <div className="jumbotron">
                     <div className="row">
                         <div className="col-md-4 col-sm-12">
