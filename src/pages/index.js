@@ -13,7 +13,7 @@ const index = () => {
       <div className="container text-center">
         <h1 className="display-4">
           Welcome to Gatsby Noob
-          </h1>
+        </h1>
         <p className="lead" style={{ fontSize: '1.5em' }}>Hi, I am Nilanjan</p>
         <hr className='bg-light' />
       </div>
@@ -30,7 +30,7 @@ const index = () => {
                 <li className="list-group-item lead">React JS</li>
               </ul>
               <div className="card-footer text-center">
-                <a href="https://github.com/nil1729" className='text-light'><p className="lead mb-0 font-weight-bold">View Projects</p></a>
+                <a href="https://github.com/nil1729" target="_blank" className='text-light'><p className="lead mb-0 font-weight-bold">View Projects</p></a>
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@ const index = () => {
                 <li className="list-group-item lead">Express JS</li>
               </ul>
               <div className="card-footer text-center">
-                <a href="https://github.com/nil1729" className='text-light'><p className="lead mb-0 font-weight-bold">View Projects</p></a>
+                <a href="https://github.com/nil1729" target="_blank" className='text-light'><p className="lead mb-0 font-weight-bold">View Projects</p></a>
               </div>
             </div>
           </div>

@@ -12,16 +12,16 @@ const Contact = () => {
             <Helmet>
                 <title>Contact</title>
             </Helmet>
-            <div className="container text-center">
+            <div className="container text-center mt-2">
                 <h1 className='display-4'>Contact Me</h1>
                 <h3 style={{ fontWeight: '100' }}>Get in Touch</h3>
-                <div className="container mt-5 text-center">
+                <div className="container mt-3 text-center">
                     <form>
                         <div className="row">
-                            <div className="col-md-6 form-group">
+                            <div className="col-md-6 form-group mt-3">
                                 <input style={inputStyle()} type="text" className="form-control" placeholder="Enter your Name" />
                             </div>
-                            <div className="col-md-6 form-group">
+                            <div className="col-md-6 form-group mt-3">
                                 <input style={inputStyle()} type="email" className="form-control" placeholder="Enter your Email Address" />
                             </div>
                         </div>
