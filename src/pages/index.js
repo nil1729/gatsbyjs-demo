@@ -1,15 +1,13 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { Helmet } from "react-helmet";
 import front from '../images/front.png'
 import back from '../images/back.jpg';
+import Head from '../components/Head';
 
 const index = () => {
   return (
     <Layout>
-      <Helmet>
-        <title>Nil Deb</title>
-      </Helmet>
+      <Head title="Home" />
       <div className="container text-center">
         <h1 className="display-4">
           Welcome to Gatsby Noob

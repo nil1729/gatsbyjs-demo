@@ -25,25 +25,38 @@ module.exports.createPages = async ({
   } = actions;
   const blogTemplate = path.resolve(__dirname, 'src', 'templates', 'blog.js');
 
+  // TODO : Only For Markdown files in Local File System
+  // const res = await graphql(`
+  //     query {
+  //       allMarkdownRemark(sort: {fields: [frontmatter___Date], order: DESC}) {
+  //         edges {
+  //           node {
+  //             fields {
+  //               slug
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  // `);
+  //! Contentful Blogs
   const res = await graphql(`
-      query {
-        allMarkdownRemark(sort: {fields: [frontmatter___Date], order: DESC}) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-            }
+    query {
+      allContentfulBlogPost{
+        edges {
+          node {
+            slug        
           }
         }
       }
-  `);
-  res.data.allMarkdownRemark.edges.forEach(edge => {
+    }  
+  `)
+  res.data.allContentfulBlogPost.edges.forEach(edge => {
     createPage({
       component: blogTemplate,
-      path: `/blog/${edge.node.fields.slug}`,
+      path: `/blog/${edge.node.slug}`,
       context: {
-        slug: edge.node.fields.slug
+        slug: edge.node.slug
       }
     });
   })

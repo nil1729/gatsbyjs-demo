@@ -2,13 +2,11 @@ import React from 'react'
 import Layout from '../components/Layout';
 import photo from '../images/photo.png';
 import { Link } from 'gatsby';
-import { Helmet } from "react-helmet";
+import Head from '../components/Head';
 const About = () => {
     return (
         <Layout>
-            <Helmet>
-                <title>About</title>
-            </Helmet>
+            <Head title="About" />
             <div className="container">
                 <h1 className="display-4 text-center my-2">About Me</h1>
                 <div className="jumbotron">

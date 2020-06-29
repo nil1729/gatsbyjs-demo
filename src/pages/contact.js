@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout';
-import { Helmet } from "react-helmet";
+import Head from '../components/Head';
 const Contact = () => {
     const inputStyle = () => {
         return {
@@ -9,9 +9,7 @@ const Contact = () => {
     };
     return (
         <Layout >
-            <Helmet>
-                <title>Contact</title>
-            </Helmet>
+            <Head title="Contact" />
             <div className="container text-center mt-2">
                 <h1 className='display-4'>Contact Me</h1>
                 <h3 style={{ fontWeight: '100' }}>Get in Touch</h3>

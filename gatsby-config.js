@@ -4,7 +4,13 @@ module.exports = {
     description: `This is a simple Project using GatsbyJS.`,
     author: `Nilanjan Deb`,
   },
-  plugins: [
+  plugins: [{
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
