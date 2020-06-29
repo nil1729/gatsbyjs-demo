@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import Head from '../components/Head';
 const Contact = () => {
     const inputStyle = () => {
