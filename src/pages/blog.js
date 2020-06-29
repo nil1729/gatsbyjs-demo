@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from "react-helmet";
 import moment from 'moment';
-
+import { Link } from 'gatsby';
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -12,19 +12,20 @@ const BlogPage = () => {
             edges {
               node {
                 id
-                fileAbsolutePath
                 excerpt
                 frontmatter {
                   title
                   Date
                   author
                 }
+                fields {
+                  slug
+                }
               }
             }
           }
         }
     `);
-  console.log(moment('2020-06-23', "YYYYMMDD").fromNow());
   return (
     <Layout>
       <Helmet>
@@ -38,7 +39,7 @@ const BlogPage = () => {
               data.allMarkdownRemark.edges.map(post => (
                 <div key={post.node.id} className="my-2 list-group-item list-group-item-action flex-column align-items-start">
                   <div className="d-flex w-100 justify-content-between align-items-center">
-                    <a href="#" className='lead text-warning' style={{ fontSize: '1.6em' }}>{post.node.frontmatter.title}</a>
+                    <Link to={post.node.fields.slug} className='lead text-warning' style={{ fontSize: '1.6em' }}>{post.node.frontmatter.title}</Link>
                     <small style={{ fontSize: '100%' }}>{moment(post.node.frontmatter.Date, "YYYYMMDD").fromNow()}</small>
                   </div>
                   <p className="my-1" style={{ fontWeight: '100' }}>{post.node.excerpt}</p>

@@ -1,0 +1,28 @@
+.markdown {
+    pre {
+        padding: 10px;
+        background-color: rgb(26, 24, 24);
+    }
+
+    hr {
+        background-color: #ffffff;
+    }
+
+    ul {
+        li {
+            font-size: 1.4em;
+            letter-spacing: 0.5px;
+            margin: 10px 0;
+
+            pre {
+                font-size: 0.8em;
+            }
+
+            ul {
+                li {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
