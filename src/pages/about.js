@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import photo from '../images/photo.png';
 import { Link } from 'gatsby';
 import Head from '../components/Head';
+import styles from '../styles/markdown.module.scss';
 const About = () => {
     return (
         <Layout>
@@ -14,7 +15,7 @@ const About = () => {
                         <div className="col-md-4 col-sm-12">
                             <img src={photo} alt="MY__Image" className="img-fluid" />
                         </div>
-                        <div className="col-md-8 col-sm-12 my-auto">
+                        <div className={`col-md-8 col-sm-12 my-auto ${styles.mTop2}`}>
                             <p className="lead">Hello, my name is</p>
                             <h2>Nilanjan Deb</h2>
                             <p style={{ fontSize: '1.2em', fontWeight: '100', letterSpacing: '0.3px' }}>
