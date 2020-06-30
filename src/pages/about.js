@@ -15,7 +15,7 @@ const About = () => {
                         <div className="col-md-4 col-sm-12">
                             <img src={photo} alt="MY__Image" className="img-fluid" />
                         </div>
-                        <div className={`col-md-8 col-sm-12 my-auto ${styles.mTop2}`}>
+                        <div className={`${styles.mTop2} col-md-8 col-sm-12`}>
                             <p className="lead">Hello, my name is</p>
                             <h2>Nilanjan Deb</h2>
                             <p style={{ fontSize: '1.2em', fontWeight: '100', letterSpacing: '0.3px' }}>

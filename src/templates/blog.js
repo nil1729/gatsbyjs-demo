@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import Head from '../components/Head';
-// import markdownStyles from '../styles/markdown.module.scss'; //! For Markdown files
+import markdownStyles from '../styles/markdown.module.scss'; //! For Markdown files
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 // TODO: Only for Markdown Files in Local File System
@@ -25,6 +25,7 @@ export const query = graphql`
         contentfulBlogPost (slug: {eq: $slug}) {
             title
             publishedDate
+            author
             body {
                 json
             }
@@ -47,8 +48,8 @@ const BlogTemplate = (props) => {
             <Head title={props.data.contentfulBlogPost.title} />
             <div className="container">
                 <h1 className="display-4 text-center">{props.data.contentfulBlogPost.title}</h1>
-                <p className="lead text-center text-danger">By Nilanjan Deb</p>
-                <div className="jumbotron">
+                <p className="lead text-center text-danger">By {props.data.contentfulBlogPost.author}</p>
+                <div className={`${markdownStyles.markdown} jumbotron`}>
                     {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
                 </div>
             </div>

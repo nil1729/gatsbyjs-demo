@@ -4,30 +4,49 @@
         background-color: rgb(26, 24, 24);
     }
 
+    img {
+        margin-top: 1em;
+        height: 100%;
+        width: 100%;
+    }
+
+    blockquote {
+        border-left: 3px solid #ffffff;
+        font-size: 1.2em;
+
+        p {
+            margin-left: 10px;
+        }
+    }
+
     hr {
         background-color: #ffffff;
     }
 
     ul {
         li {
-            font-size: 1.4em;
+            // font-size: 1.4em;
             letter-spacing: 0.5px;
             margin: 10px 0;
 
             pre {
-                font-size: 0.8em;
+                // font-size: 0.8em;
             }
 
             ul {
                 li {
-                    font-size: 1em;
+                    // font-size: 1em;
                 }
             }
         }
     }
 }
 
-@media only screen and (max-width: 600px) {
+.mTop2 {
+    margin: auto 0;
+}
+
+@media only screen and (max-width: 768px) {
     .mTop2 {
         margin-top: 2em !important;
     }

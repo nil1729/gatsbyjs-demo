@@ -12,6 +12,7 @@ const BlogPage = () => {
             node {
               id
               title
+              author
               publishedDate (formatString: "MMMM Do, YYYY")
               slug             
             }
@@ -35,7 +36,7 @@ const BlogPage = () => {
                   </div>
                   {/* <p className="my-1" style={{ fontWeight: '100' }}>{post.node.excerpt}</p> */}
                   <br />
-                  <small className='text-info' style={{ fontSize: '100%', fontWeight: '100' }}>By Nilanjan Deb</small>
+                  <small className='text-light' style={{ fontSize: '110%', letterSpacing: '0.5px', fontWeight: '500' }}>By {post.node.author}</small>
                 </div>
               ))
             }
